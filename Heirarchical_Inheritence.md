@@ -31,6 +31,55 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 5. Display collected information using class methods.
 
 ## Program
-Add code here
+```
+class Details:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def getName(self):
+        return self.name
+
+    def getAge(self):
+        return self.age
+
+
+class Employee(Details):
+    def __init__(self, name, age, employee_id, department):
+        super().__init__(name, age)
+        self.employee_id = employee_id
+        self.department = department
+
+    def getEmployeeDetails(self):
+        print("Name:", self.getName())
+        print("Age:", self.getAge())
+        print("Employee ID:", self.employee_id)
+        print("Department:", self.department)
+
+
+class Patient(Details):
+    def __init__(self, name, age, patient_id, disease):
+        super().__init__(name, age)
+        self.patient_id = patient_id
+        self.disease = disease
+
+    def getPatientDetails(self):
+        print("Name:", self.getName())
+        print("Age:", self.getAge())
+        print("Patient ID:", self.patient_id)
+        print("Disease:", self.disease)
+
+
+emp = Employee("Arun", 30, "E101", "HR")
+pat = Patient("Meena", 25, "P201", "Fever")
+
+emp.getEmployeeDetails()
+print()
+pat.getPatientDetails()
+```
 ## Sample Output
 
+<img width="440" height="383" alt="image" src="https://github.com/user-attachments/assets/04cbe279-071b-4628-b0e2-153e119eb840" />
+
+## Result:
+Therefore the program was executed successfully.
